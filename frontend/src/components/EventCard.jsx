@@ -5,7 +5,6 @@ import { Calendar, MapPin, Clock } from "lucide-react";
 const EventCard = ({ event }) => {
   const { _id, id, title, description, date, time, location, image, category } =
     event;
-  const currentDate = new Date();
 
   // Handle both _id (MongoDB) and id (local mock)
   const eventId = _id || id;
@@ -18,14 +17,14 @@ const EventCard = ({ event }) => {
     } experience at ${location}. Don't miss out!`;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 flex flex-col h-full group">
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 flex flex-col h-full group">
       <div className="relative h-48 overflow-hidden">
         <img
           src={image || "/placeholder.jpg"}
           alt={title}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
-        <div className="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-white shadow-sm backdrop-blur-sm">
+        <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-white shadow-sm backdrop-blur-sm">
           {category}
         </div>
       </div>
@@ -64,7 +63,7 @@ const EventCard = ({ event }) => {
         </div>
 
         <Link to={`/events/${eventId}`} className="mt-auto">
-          <Button className="w-full group-hover:bg-blue-600 transition-colors">
+          <Button className="w-full group-hover:bg-indigo-400 transition-colors">
             View Details
           </Button>
         </Link>
