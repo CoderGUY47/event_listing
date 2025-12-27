@@ -1,0 +1,58 @@
+const mockEvents = [
+  {
+    title: "Jazz Night",
+    date: "2025-12-28",
+    time: "07:00 PM",
+    location: "Downtown Hall",
+    category: "Music",
+    image: "/images/music-1.png",
+    description: "A smooth evening of jazz music.",
+  },
+  {
+    title: "Tech Conf 2025",
+    date: "2025-12-31",
+    time: "09:00 AM",
+    location: "Convention Center",
+    category: "Technology",
+    image: "/images/tech-1.png",
+    description: "The biggest tech conference in the city.",
+  },
+  {
+    title: "Art Expo",
+    date: "2026-01-03",
+    time: "11:00 AM",
+    location: "City Gallery",
+    category: "Art",
+    image: "/images/art-1.png",
+    description: "Explore modern art from local artists.",
+  },
+  {
+    title: "Food Festival",
+    date: "2026-01-07",
+    time: "12:00 PM",
+    location: "City Park",
+    category: "Food",
+    image: "/images/food-1.png",
+    description: "Taste dishes from around the world.",
+  },
+  {
+    title: "City Marathon",
+    date: "2026-01-10",
+    time: "06:00 AM",
+    location: "Main Street",
+    category: "Sports",
+    image: "/images/sports-1.png",
+    description: "Run for charity in the annual marathon.",
+  },
+  {
+    title: "Pottery Workshop",
+    date: "2026-01-13",
+    time: "03:00 PM",
+    location: "Creative Studio",
+    category: "Workshop",
+    image: "/images/workshop-1.png",
+    description: "Learn how to make pottery from experts.",
+  },
+];
+
+module.exports = mockEvents;

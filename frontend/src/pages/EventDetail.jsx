@@ -38,7 +38,9 @@ const EventDetail = () => {
       </div>
 
       <div>
-        <h1 className="text-4xl font-bold mb-4">{event.title}</h1>
+        <h1 className="text-[18px] md:text-4xl font-bold mb-4">
+          {event.title}
+        </h1>
         <div className="flex flex-wrap gap-4 text-slate-500 mb-6">
           <span>
             {new Date(event.date).toLocaleDateString()} at {event.time}
@@ -46,7 +48,7 @@ const EventDetail = () => {
           <span>•</span>
           <span>{event.location}</span>
           <span>•</span>
-          <span className="text-blue-600 font-medium">{event.category}</span>
+          <span className="text-indigo-600 font-medium">{event.category}</span>
         </div>
 
         <div className="prose max-w-none">

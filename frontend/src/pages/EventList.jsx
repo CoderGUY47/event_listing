@@ -36,7 +36,7 @@ const EventList = () => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold">
+      <h1 className="text-3xl font-bold dark:text-white">
         {categoryParam ? `${categoryParam} Events` : "All Events"}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -44,7 +44,7 @@ const EventList = () => {
           <EventCard key={event._id || event.id} event={event} />
         ))}
         {filteredEvents.length === 0 && !loading && (
-          <div className="col-span-full text-center py-12 text-slate-500">
+          <div className="col-span-full text-center py-12 text-slate-500 dark:text-slate-400">
             No events found for this category.
           </div>
         )}

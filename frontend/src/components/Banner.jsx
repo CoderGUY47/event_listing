@@ -68,7 +68,10 @@ const Banner = () => {
       <div className="embla" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide) => (
-            <div key={slide.id} className="relative min-w-full h-[500px]">
+            <div
+              key={slide.id}
+              className="relative min-w-full h-[250px] md:h-[500px]"
+            >
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -76,22 +79,21 @@ const Banner = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-12 text-white">
                 <div className="container mx-auto">
-                  <h1 className="text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg">
+                  <h1 className="text-[18px] md:text-5xl font-extrabold mb-2 md:mb-4 tracking-tight drop-shadow-lg">
                     {slide.title}
                   </h1>
-                  <p className="text-xl text-slate-200 mb-8 max-w-2xl drop-shadow-md">
+                  <p className="text-[14px] md:text-xl text-slate-200 mb-4 md:mb-8 max-w-2xl drop-shadow-md">
                     {slide.subtitle}
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex gap-2 md:gap-4">
                     <Link to="/events">
-                      <Button size="lg" className="text-lg px-8 py-6">
+                      <Button className="h-8 text-xs px-4 md:h-auto md:text-lg md:px-8 md:py-6">
                         {slide.cta}
                       </Button>
                     </Link>
                     <Button
                       variant="outline"
-                      size="lg"
-                      className="text-lg px-8 py-6 bg-transparent text-white border-white hover:bg-white hover:text-slate-900"
+                      className="h-8 text-xs px-4 md:h-auto md:text-lg md:px-8 md:py-6 bg-transparent text-white border-white hover:bg-white hover:text-slate-900"
                     >
                       Learn More
                     </Button>
